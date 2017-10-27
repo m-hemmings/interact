@@ -1,0 +1,39 @@
+
+<head>
+    <LINK href="/css/draggables.css" rel="stylesheet" type="text/css">
+    <LINK href="/css/textArea.css" rel="stylesheet" type="text/css">        
+</head>
+
+<script src=/src/draggables.js></script>
+
+<div class="column" draggable="true">
+    <div class="editor" style="height: 90%; width: 100%">
+            function foo(items) {
+                var x = "All this is syntax highlighted";
+                return x;
+            }
+    </div>
+</div>
+<div class="column" draggable="true">
+    <div class="editor" style="height: 90%; width: 100%">
+    </div>
+</div>
+<div class="column" draggable="true">
+    <div class="editor" style="height: 90%; width: 100%">
+    </div>
+</div>
+
+<script src="/src/ace-src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    editors = document.querySelectorAll('.editor');
+    [].forEach.call(editors,(obj,i)=>{
+        console.log(obj)
+        var editor = ace.edit(obj);
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/javascript");
+    })
+    
+</script>
+
+<script>init()</script>
+
