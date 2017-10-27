@@ -31,6 +31,6 @@ app.get('/tinymce', (req,res) => {
 
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/src', express.static(__dirname + '/src'));
-app.listen(8080);
+app.listen(9001);
 
 console.log('Server started');
